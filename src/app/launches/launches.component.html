@@ -11,4 +11,21 @@
     <p><strong>Launch Year:</strong> {{launch.launch_year}}</p>
     <p><strong>Succesfull Launch:</strong> {{launch.launch_success}}</p>
   </div>
+  <div *ngIf="!launches || (launches && !launches.length)">
+    <p>No data available for the selected filter</p>
+  </div>
+
+  <!--Loader-->
+  <div class="loader_wrapper" *ngIf="showLoader">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 </div>
