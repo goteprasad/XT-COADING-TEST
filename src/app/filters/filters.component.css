@@ -1,0 +1,29 @@
+h4 {
+  margin: 0;
+}
+p {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+ul.filter-links {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+ul.filter-links li {
+  list-style-type: none;
+  width: 50%;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 10px;
+  text-align: center;
+}
+ul.filter-links li a {
+  cursor: pointer;
+  padding: 6px 15px;
+  border-radius: 6px;
+  background-color: rgb(204, 255, 175);
+}
+ul.filter-links li a.active {
+  background-color: rgb(147, 197, 117);
+}

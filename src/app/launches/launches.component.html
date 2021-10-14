@@ -1,0 +1,14 @@
+<div class="launches-container">
+  <div class="launch-card" *ngFor="let launch of launches">
+    <div class="img-col">
+      <img [src]="launch.links.mission_patch_small" alt="{{launch.mission_name}}"/>
+    </div>
+    <p class="mission_title"><a>{{launch.mission_name}} #{{launch.flight_number}}</a></p>
+    <p><strong>Mission Ids</strong></p>
+    <ul>
+      <li *ngFor="let id of launch.mission_id">{{id}}</li>
+    </ul>
+    <p><strong>Launch Year:</strong> {{launch.launch_year}}</p>
+    <p><strong>Succesfull Launch:</strong> {{launch.launch_success}}</p>
+  </div>
+</div>

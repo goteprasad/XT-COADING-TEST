@@ -1,0 +1,27 @@
+<div class="card">
+  <h4>Filters</h4>
+  <p>Launch Year</p>
+  <ul class="filter-links" *ngIf="launchYears">
+    <li *ngFor="let year of launchYears">
+      <a (click)="selectYear(year)" [class.active]="year.isSelected">{{year.year}}</a>
+    </li>
+  </ul>
+  <p>Succesfull Launch</p>
+  <ul class="filter-links" *ngIf="launchYears">
+    <li>
+      <a (click)="selectSuccesfullLaunch(true)" [class.active]="isSuccesfullLaunch">True</a>
+    </li>
+    <li>
+      <a (click)="selectSuccesfullLaunch(false)" [class.active]="isSuccesfullLaunch === false">False</a>
+    </li>
+  </ul>
+  <p>Succesfull Landing</p>
+  <ul class="filter-links" *ngIf="launchYears">
+    <li>
+      <a (click)="selectSuccesfullLanding(true)" [class.active]="isSuccesfullLanding">True</a>
+    </li>
+    <li>
+      <a (click)="selectSuccesfullLanding(false)" [class.active]="isSuccesfullLanding === false">False</a>
+    </li>
+  </ul>
+</div>
